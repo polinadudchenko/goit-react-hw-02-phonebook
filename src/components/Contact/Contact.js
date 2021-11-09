@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import s from './Contact.module.css'
 
-export default function Contact({name, number}) {
+export default function Contact({deleteBtn, name, number}) {
     
         return <>
             <td className={s.contact_line}>{ name }</td>
             <td className={s.contact_line}>{number}</td>
-            <td className={s.contact_line}><button>Delete</button></td>
+            <td className={s.contact_line}><button onClick={ deleteBtn }>Delete</button></td>
             </>
                     
               
