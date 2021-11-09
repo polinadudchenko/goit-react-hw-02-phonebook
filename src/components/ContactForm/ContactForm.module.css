@@ -1,0 +1,8 @@
+.contact_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_form__input {
+  margin-bottom: 15px;
+}

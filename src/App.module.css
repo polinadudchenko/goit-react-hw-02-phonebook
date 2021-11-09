@@ -12,4 +12,15 @@ ul {
 }
 .App {
   text-align: center;
+  background-image: url('../src/images/sprite.svg#addressbook');
+}
+
+.App_title{
+  background-image: url('./images/sprite.svg#addressbook');
+}
+
+.App_content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
 }
