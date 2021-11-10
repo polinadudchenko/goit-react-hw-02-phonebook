@@ -6,7 +6,7 @@ export default function Contact({deleteBtn, name, number}) {
         return <>
             <td className={s.contact_line}>{ name }</td>
             <td className={s.contact_line}>{number}</td>
-            <td className={s.contact_line}><button onClick={ deleteBtn }>Delete</button></td>
+            <td className={s.contact_line}><button className={s.contact_btn}onClick={ deleteBtn }>Delete</button></td>
             </>
                     
               
