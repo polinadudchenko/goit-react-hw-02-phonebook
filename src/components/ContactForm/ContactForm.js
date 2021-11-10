@@ -28,13 +28,14 @@ class ContactForm extends Component{
         this.setState({...INITIAL_STATE})
     }
     render() {
+        const { name, number } = this.state;
         return <form className={s.contact_form} onSubmit={this.handleSubmit}>
             <label className={s.contact_form__label}> Name
                 <input
                     type="text"                
                     className={s.contact_form__input}
                     name="name"
-                    value={this.state.name}
+                    value={name}
                     onChange={this.handleChange}
                     pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                     title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
@@ -45,7 +46,7 @@ class ContactForm extends Component{
                 <input
                     type="tel"
                     name="number"
-                    value={this.state.number}
+                    value={number}
                     className={s.contact_form__input}
                     onChange={this.handleChange}
                     pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
