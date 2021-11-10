@@ -10,17 +10,28 @@ h3 {
 ul {
   list-style: none;
 }
+body{
+  background-image: url('./images/addressbook.svg'), url('./images/addressbook.svg');
+  background-position: 0 0, 50% 50%;
+  background-repeat: round, round;
+  background-size: 200px, 200px;
+}
 .App {
-  text-align: center;
-  background-image: url('../src/images/sprite.svg#addressbook');
+  
+  
 }
 
 .App_title{
-  background-image: url('./images/sprite.svg#addressbook');
+  padding: 30px;
+
+  text-align: center;
+  font-size: 45px;
+  color: #ffffff;
+  background-color: #414141;
 }
 
 .App_content {
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: center;
 }

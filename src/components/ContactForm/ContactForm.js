@@ -8,7 +8,9 @@ const INITIAL_STATE = {
 };
 
 class ContactForm extends Component{
-   
+    static propTypes = {
+        onSubmit: PropTypes.func.isRequired,
+    }
     state = {...INITIAL_STATE}
     
     handleChange = (e) => {

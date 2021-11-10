@@ -40,20 +40,23 @@ class App extends Component {
     }))
   }
 
+  handleAlert = () => {
+    alert('No matches is found')
+  }
+
   render() {
     return (
       <div className={s.App}>
-        <h1>Phonebook</h1>
+        <h1 className={s.App_title}>Phonebook</h1>
         <div className={s.App_content}>
         <Section title="Create a new Contact">
         <ContactForm onSubmit={this.onHandlerSubmit} />
         </Section>
        
-        <Section title="Contacts">
+        <Section title="Your contacts">
             <Filter onHandleFilter={this.handleFilter} />
-            {this.filterContacts().length === 0
-                ? console.log('ooops')
-              : <ContactList contacts={this.state.filter ? this.filterContacts() : this.state.contacts} onDeleteContact={ this.deleteContact}/>
+            {!(this.filterContacts().length === 0)
+            && <ContactList contacts={this.state.filter ? this.filterContacts() : this.state.contacts} onDeleteContact={ this.deleteContact}/>
             }
           </Section>
         </div>

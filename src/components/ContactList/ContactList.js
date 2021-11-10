@@ -16,16 +16,16 @@ class ContactList extends Component{
     render() {
         const { contacts, onDeleteContact } = this.props;
         return <table className={s.contact_list} >
-            <thead>
-                <tr>
-                   <th>Name</th>
-                   <th>Number</th>
-                   <th>Обработать</th>
+            <thead className={s.contact_list__head}>
+                <tr className={s.contact_list__head_line}>
+                   <th className={s.contact_list__head_column}>Name</th>
+                   <th className={s.contact_list__head_column}>Number</th>
+                   <th className={s.contact_list__head_column}>Edit</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className={s.contact_list__body}>
             {contacts.map(({ id, name, number }) => (
-                <tr key={id} className={s.contact_list__item}>
+                <tr key={id} className={s.contact_list__body_line}>
                     <Contact name={name} number={number} deleteBtn={() => onDeleteContact(id) }/>
                 </tr>)
             )}
