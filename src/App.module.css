@@ -11,10 +11,10 @@ ul {
   list-style: none;
 }
 body{
-  background-image: url('./images/addressbook.svg'), url('./images/addressbook.svg');
-  background-position: 0 0, 50% 50%;
+  background-image: url('./images/addressbook.svg'), url('./images/mailbook.svg');
+  background-position: 0 0, 75px 75px;
   background-repeat: round, round;
-  background-size: 200px, 200px;
+  background-size: 150px, 150px;
 }
 .App {
   
